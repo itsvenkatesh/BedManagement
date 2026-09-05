@@ -22,7 +22,7 @@ public class Bed {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "bed_number")
-	private Long bedNumber;
+	private long bedNumber;
 	
 	@ManyToOne
 	@JoinColumn(name = "room_number")
@@ -32,11 +32,11 @@ public class Bed {
 	private Boolean isOccupied;
 	
 	@Column(name = "patient_id")
-	private Long patientId;
+	private long patientId;
 	
 //	private List<BedAssignmentHistory> bedAssignmentHistory;
 
-	public Bed(Room room, Boolean isOccupied, Long patientId) {
+	public Bed(Room room, Boolean isOccupied, long patientId) {
 		super();
 		this.room = room;
 		this.isOccupied = isOccupied;
