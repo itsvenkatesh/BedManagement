@@ -22,7 +22,7 @@ public class Bed {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "bed_number")
-	private Long bedNum;
+	private Long bedNumber;
 	
 	@ManyToOne
 	@JoinColumn(name = "room_number")

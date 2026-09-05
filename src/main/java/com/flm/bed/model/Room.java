@@ -23,20 +23,21 @@ public class Room {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "room_number")
-	private Long roomNum;
+	private Long roomNumber;
 	 
 	@Column(name = "room_type")
-	private Long roomType;
+	private String roomType;
 	 
-	private Long capacity;
+	@Column(name = "room_capacity")
+	private Long roomCapacity;
 	 
 	@OneToMany(mappedBy = "room")
-	private List<Bed> listOfBeds;
+	private List<Bed> beds;
 
-	public Room(Long roomType, Long capacity, List<Bed> listOfBeds) {
+	public Room(String roomType, Long roomCapacity, List<Bed> beds) {
 		super();
 		this.roomType = roomType;
-		this.capacity = capacity;
-		this.listOfBeds = listOfBeds;
+		this.roomCapacity = roomCapacity;
+		this.beds = beds;
 	 }
 }
